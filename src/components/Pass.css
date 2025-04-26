@@ -8,4 +8,28 @@ body {
     justify-content: center;
     align-items: center;
   }
- 
+  
+  .pass-cont {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 320px;
+  }
+  
+  .pass-cont h2 {
+    color: #6a11cb;
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+  
+  .pass-cont input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #6a11cb;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
