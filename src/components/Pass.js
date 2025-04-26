@@ -16,6 +16,8 @@ function Password () {
       if (score >= 1) return "Weak";
       return "";
     };
+    const strength = getStrength(password);
+
   
     return (
       <div className="pass-cont">
@@ -26,9 +28,11 @@ function Password () {
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Enter password"
         />
-        {password && (
-          <p className="strength">Strength: {getStrength(password)}</p>
-        )}
+          {password && (
+        <p className={`strength ${strength}`}>
+          Strength: {strength.charAt(0).toUpperCase() + strength.slice(1)}
+        </p>
+      )}
       </div>
     );
   }
