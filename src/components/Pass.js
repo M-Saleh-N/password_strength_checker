@@ -16,7 +16,21 @@ function Password () {
       if (score >= 1) return "Weak";
       return "";
     };
-
+  
+    return (
+      <div className="pass-cont">
+        <h2>Password Strength</h2>
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="Enter password"
+        />
+        {password && (
+          <p className="strength">Strength: {getStrength(password)}</p>
+        )}
+      </div>
+    );
   }
   
   export default Password;
